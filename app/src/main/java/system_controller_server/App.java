@@ -12,11 +12,10 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(App.class.getResource("/scene.fxml"));
-
         Scene scene = new Scene(root);
         scene.getStylesheets().add(App.class.getResource("/styles.css").toExternalForm());
         
-        stage.setTitle("JavaFX and Gradle");
+        stage.setTitle("System Controller");
         stage.setScene(scene);
         stage.show();
     }
