@@ -5,12 +5,17 @@
 <?import javafx.scene.layout.HBox?>
 
 
-<VBox prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="system_controller_server.FXMLController">
+<VBox prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="system_controller_server.FXMLController" spacing="16" >
     <style>-fx-padding: 16;</style>
     <children>
         <HBox>
-            <Label fx:id="ipLabel" />
+            <Label fx:id="ipLabel" minWidth="70" />
             <Label fx:id="ipValue" />
+        </HBox>
+
+        <HBox>
+            <Label fx:id="portLabel" minWidth="70"/>
+            <Label fx:id="portValue" />
         </HBox>
     </children>
 </VBox>
