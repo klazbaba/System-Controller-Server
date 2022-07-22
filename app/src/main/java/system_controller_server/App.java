@@ -6,7 +6,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-
 public class App extends Application {
 
     @Override
@@ -14,9 +13,10 @@ public class App extends Application {
         Parent root = FXMLLoader.load(App.class.getResource("/scene.fxml"));
         Scene scene = new Scene(root);
         scene.getStylesheets().add(App.class.getResource("/styles.css").toExternalForm());
-        
+
         stage.setTitle("System Controller");
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
     }
 

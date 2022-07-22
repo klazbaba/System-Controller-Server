@@ -3,11 +3,11 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
 
-
-<VBox prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="system_controller_server.FXMLController" spacing="16" >
-    <style>-fx-padding: 16;</style>
-    <children>
+<HBox xmlns:fx="http://javafx.com/fxml/1"  maxHeight="400.0" maxWidth="600.0" fx:controller="system_controller_server.FXMLController">
+    <VBox spacing="16" HBox.hgrow="ALWAYS">
+        <style>-fx-padding: 16;</style>
         <HBox>
             <Label fx:id="ipLabel" minWidth="70" />
             <Label fx:id="ipValue" />
@@ -17,5 +17,10 @@
             <Label fx:id="portLabel" minWidth="70"/>
             <Label fx:id="portValue" />
         </HBox>
-    </children>
-</VBox>
+    </VBox>
+
+    <VBox alignment="CENTER">
+        <style>-fx-padding: 48;</style>
+        <Button fx:id="button" onAction="#handleButtonPress" />
+    </VBox>
+</HBox>
