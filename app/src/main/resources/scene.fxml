@@ -16,6 +16,7 @@
         <HBox>
             <Label fx:id="portLabel" minWidth="70"/>
             <Label fx:id="portValue" />
+            <Label fx:id="status" />
         </HBox>
     </VBox>
 

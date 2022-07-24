@@ -36,12 +36,20 @@ public class FXMLController implements Initializable {
         if (button.getText().equals("Start")) {
             try {
                 socket = new Socket();
+                // This will allow us get machine's ip address that can be used for public communications
                 socket.connect(new InetSocketAddress("google.com", 80));
                 ipValue.setText(socket.getLocalAddress().toString().replace("/", ""));
                 server = new ServerSocket(0);
                 portValue.setText(String.valueOf(server.getLocalPort()));
                 button.setText("Stop");
                 button.setStyle("-fx-background-color: red;");
+                new Thread(() -> {
+                    try {
+                        server.accept();
+                    } catch (IOException ex) {
+                        Logger.getLogger(FXMLController.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }).start();
             } catch (IOException ex) {
                 Logger.getLogger(FXMLController.class.getName()).log(Level.SEVERE, null, ex);
             }
